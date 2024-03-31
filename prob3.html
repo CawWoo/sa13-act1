@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        /* Navbar styles */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Welcome section styles */
+        .welcome {
+            text-align: center;
+            padding: 50px;
+        }
+
+        .about {
+            text-align: center;
+            padding: 50px;
+        }
+
+        /* Gallery styles */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Center horizontally */
+            align-items: flex-start; /* Align items at the top vertically */
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            flex: 0 0 calc(33.33% - 20px);
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Contact form styles */
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <div id="home" class="welcome">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Where I show off my passions toward , photography, art, code, etc.</p>
+    </div>
+
+    <div id="about" class="about">
+        <h2>About Me</h2>
+        <p>I am a college student that likes to dabble in various things, like taking pictures of pets, including my own and the ones I care for.</p>
+    </div>
+
+    <div id="portfolio" class="gallery">
+        <div class="gallery-item">
+            <img src="C:\Users\ali_r\Pictures\Laika.png" alt="Picture of Laika">
+        </div>
+        <div class="gallery-item">
+            <img src="C:\Users\ali_r\Pictures\Katie.png" alt="Picture of Katie">
+        </div>
+    </div>
+
+    <div id="contact">
+        <form action="submit_form.php" method="post">
+        <h2>Contact Me</h2>
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="text" name="email" placeholder="Your Email">
+        <textarea name="message" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message">
+    </form>
+</body>
+</html>
